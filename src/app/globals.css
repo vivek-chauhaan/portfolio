@@ -1,9 +1,6 @@
 @import "tailwindcss";
+@import '../styles/personal.css';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
 @theme inline {
   --color-background: var(--background);
@@ -23,4 +20,67 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body {
+  @apply bg-gray-600 text-white;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+} */
+
+body {
+  @apply bg-[rgb(15_15_18)] text-white m-0 p-0 font-sans;
+}
+
+
+/* globals.css */
+.btn-gradient1 {
+  @apply px-6 py-3 rounded-lg font-medium text-white cursor-pointer transition;
+  background-image: linear-gradient(to right, #4ade80, #3b82f6, #ec4899);
+}
+
+/* green fade ganerate hover start */
+/* globals.css */
+/* In globals.css */
+/* globals.css */
+.btn-project {
+  @apply flex items-center gap-2 px-6 py-4 cursor-pointer shadow rounded-lg text-white transition duration-300;
+  background-color: #1f2937;
+  /* Dark Gray (bg-gray-800) */
+  border: 0.5px solid transparent;
+
+}
+
+.btn-project:hover {
+  background-color: rgba(16, 185, 129, 0.2);
+  /* Light green background on hover */
+  border-color: #22c55e;
+  /* Green border on hover */
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.6);
+  /* Green glow on hover */
+}
+
+
+
+/* end this button code */
+
+
+/* globals.css */
+
+
+.btn-cyan1 {
+  @apply flex items-center gap-2 px-6 py-4 cursor-pointer font-medium shadow rounded-lg text-white transition duration-300;
+  background-color: #1f2937;
+  /* Dark Gray (bg-gray-800) */
+  border: 0.5px solid transparent;
+}
+
+.btn-cyan1:hover {
+  background-color: rgba(16, 185, 129, 0.2);
+  /* Light green background on hover */
+  border-color: #00BCD4;
+  /* Cyan border on hover */
+  box-shadow: 0 0 12px rgba(0, 188, 212, 0.6);
+  /* Cyan glow on hover */
 }

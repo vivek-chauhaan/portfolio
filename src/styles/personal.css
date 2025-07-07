@@ -1,0 +1,39 @@
+/* ✅ Your Gradient & Shimmer Effect */
+.bg-text-gradient {
+    background-image: linear-gradient(to right,
+            #9C27B0,
+
+            #00BCD4,
+
+            #3b82f6);
+}
+
+@keyframes text-shimmer {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 0%;
+    }
+}
+
+.animate-text-shimmer {
+    animation: text-shimmer 3s linear infinite;
+
+}
+
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    background-image: linear-gradient(to right,
+            #9C27B0,
+
+            #00BCD4,
+
+            #3b82f6);
+    animation: text-shimmer 3s linear infinite;
+
+}
