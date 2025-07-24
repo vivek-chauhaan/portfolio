@@ -4,7 +4,8 @@ import React from "react";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faFileAlt } from "@fortawesome/free-solid-svg-icons";
-const Hero = ({ activeSection, children }) => {
+import Link from "next/link";
+const Hero = ({ activeSection, children, onSectionClick }) => {
   return (
     <SectionWrapper id="hero">
       {activeSection ? (
@@ -49,8 +50,10 @@ const Hero = ({ activeSection, children }) => {
                   </h2>
                 </div>
                 <p className="text-gray-400 text-base">
-                  A passionate coder exploring automation and looking out to
-                  build cool stuff.
+                  I'm a Web Developer passionate about coding, automation, and
+                  building cool, functional web experiences. I love turning
+                  ideas into clean, interactive websites and am always exploring
+                  new tools and tech.
                 </p>
               </div>
 
@@ -62,20 +65,29 @@ const Hero = ({ activeSection, children }) => {
 
             {/* Buttons Below Border */}
             <div className="flex flex-wrap gap-4 justify-center mt-8">
-              <button className="btn-project group flex items-center gap-2">
+              <button
+                onClick={() => onSectionClick("projects")}
+                className="btn-project"
+              >
                 View Projects
-                <FontAwesomeIcon
-                  icon={faArrowRight}
-                  className="transform transition-transform duration-300 group-hover:translate-x-2"
-                />
               </button>
 
-              <button className="btn-gradient1">Contact Me</button>
-
-              <button className="btn-cyan1">
-                <FontAwesomeIcon icon={faFileAlt} className=" text-[#00BCD4]" />{" "}
-                Resume
+              <button
+                onClick={() => onSectionClick("contact")}
+                className="btn-gradient1"
+              >
+                Contact Me
               </button>
+
+              <a href="/vivek_Resume.pdf" download>
+                <button className="btn-cyan1">
+                  <FontAwesomeIcon
+                    icon={faFileAlt}
+                    className="text-[#00BCD4]"
+                  />{" "}
+                  Resume
+                </button>
+              </a>
             </div>
 
             {/* Bouncy Mouse Icon */}

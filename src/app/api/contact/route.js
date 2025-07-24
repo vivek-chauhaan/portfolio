@@ -1,26 +1,40 @@
-import { Resend } from "resend";
-import { NextResponse } from "next/server";
+import nodemailer from "nodemailer";
 
-const resend = new Resend(process.env.RESEND_API_KEY); // ✅ Loaded from .env.local
-
-export async function POST(request) {
-  const body = await request.json();
-
+export async function POST(req) {
   try {
-    const data = await resend.emails.send({
-      from: "Portfolio Contact <noreply@yourdomain.com>", // ✅ Use verified sender later
-      to: "your_email@gmail.com", // ✅ Your real inbox here
-      subject: "New Contact Form Submission",
+    const body = await req.json();
+    const { name, email, message } = body;
+
+    const transporter = nodemailer.createTransport({
+      service: "Gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    await transporter.sendMail({
+      from: email,
+      to: process.env.EMAIL_USER,
+      subject: `New message from ${name}`,
       html: `
-        <p><strong>Name:</strong> ${body.name}</p>
-        <p><strong>Email:</strong> ${body.email}</p>
-        <p><strong>Message:</strong><br/> ${body.message}</p>
+        <h3>You've received a new message:</h3>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
       `,
     });
 
-    return NextResponse.json({ success: true, data });
+    return new Response(JSON.stringify({ success: true }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
   } catch (error) {
-    console.error(error);
-    return NextResponse.json({ success: false, error });
+    console.error("Email error:", error);
+    return new Response(JSON.stringify({ error: "Failed to send email" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }

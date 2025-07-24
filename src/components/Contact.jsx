@@ -58,7 +58,7 @@ const Contact = () => {
               <input
                 type="text"
                 name="name"
-                placeholder="John Doe"
+                placeholder="enter you name"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -72,7 +72,7 @@ const Contact = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="john@example.com"
+                placeholder="email here.."
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -104,54 +104,67 @@ const Contact = () => {
         {/* Right: Contact Info */}
         <div className="flex flex-col gap-6">
           {/* Contact Info */}
+
           <div className="bg-gray-900 border border-gray-700 rounded-xl p-6">
             <h3 className="text-lg font-semibold text-white mb-4">
               Contact Info
             </h3>
             <div className="flex flex-col gap-4 text-gray-300 text-sm">
               {/* Email */}
-              <div className="flex items-start gap-3">
+              <a
+                href="mailto:vivekchauhan1181@gmail.com"
+                className="flex items-start gap-3 hover:text-green-400 transition"
+              >
                 <FontAwesomeIcon
                   icon={faEnvelope}
                   className="text-green-400 text-2xl mt-1"
                 />
                 <div>
-                  <p className="text-lg  tracking-wide text-gray-400 ">Email</p>
-                  <span>chauhanvivek65652@gmail.com</span>
+                  <p className="text-lg tracking-wide text-gray-400">Email</p>
+                  <span>vivekchauhan1181@gmail.com</span>
                 </div>
-              </div>
+              </a>
 
               {/* LinkedIn */}
-              <div className="flex items-start gap-3">
+              <a
+                href="https://www.linkedin.com/in/vivek-chauhan973"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 hover:text-cyan-400 transition"
+              >
                 <FontAwesomeIcon
                   icon={faLinkedin}
                   className="text-cyan-400 text-2xl mt-1"
                 />
                 <div>
-                  <p className="text-lg  tracking-wide text-gray-400">
+                  <p className="text-lg tracking-wide text-gray-400">
                     LinkedIn
                   </p>
-                  <span>https://www.linkedin.com/in/vivek-chauhan973</span>
+                  <span>linkedin.com/in/vivek-chauhan973</span>
                 </div>
-              </div>
+              </a>
 
               {/* GitHub */}
-              <div className="flex items-start gap-3">
+              <a
+                href="https://github.com/vivek-chauhaan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-start gap-3 hover:text-pink-400 transition"
+              >
                 <FontAwesomeIcon
                   icon={faGithub}
                   className="text-pink-400 text-2xl mt-1"
                 />
                 <div>
-                  <p className="text-lg  tracking-wide text-gray-400 ">
-                    GitHub
-                  </p>
-                  <span>https://github.com/vivek-chauhaan</span>
+                  <p className="text-lg tracking-wide text-gray-400">GitHub</p>
+                  <span>github.com/vivek-chauhaan</span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
           {/* Let's Connect Box */}
+
           <div className="bg-gray-900 border border-gray-700 rounded-xl p-6">
             <h3 className="text-xl font-semibold text-white mb-4">
               Let’s Connect
@@ -161,18 +174,33 @@ const Contact = () => {
               open to discussing new opportunities and ideas.
             </p>
             <div className="flex gap-4 text-xl text-gray-400">
-              <FontAwesomeIcon
-                icon={faLinkedin}
-                className="hover:text-cyan-400  cursor-pointer"
-              />
-              <FontAwesomeIcon
-                icon={faGithub}
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/vivek-chauhan973"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-cyan-400 cursor-pointer"
+              >
+                <FontAwesomeIcon icon={faLinkedin} />
+              </a>
+
+              {/* GitHub */}
+              <a
+                href="https://github.com/vivek-chauhaan"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hover:text-pink-400 cursor-pointer"
-              />
-              <FontAwesomeIcon
-                icon={faEnvelope}
+              >
+                <FontAwesomeIcon icon={faGithub} />
+              </a>
+
+              {/* Email */}
+              <a
+                href="mailto:chauhanvivek65652@gmail.com"
                 className="hover:text-green-400 cursor-pointer"
-              />
+              >
+                <FontAwesomeIcon icon={faEnvelope} />
+              </a>
             </div>
           </div>
         </div>

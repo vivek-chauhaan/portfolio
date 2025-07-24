@@ -1,35 +1,5 @@
 const projects = [
   {
-    title: "GitCury",
-    repo: "https://github.com/rathnayajain-0291/GitCury",
-    liveDemo: "https://gitcury-demo.com",
-    description:
-      "My personal portfolio website built using Next.js and Tailwind CSS.",
-    techStack: ["Go", "GitHub"],
-    badge: "Featured",
-    image: "/assets/javascript.svg",
-  },
-  {
-    title: "LIBR - A Moderated, Censorship-Resilient Digital Forum",
-    repo: "https://github.com/DA-IITJ/libr",
-    liveDemo: "https://libr-demo.com",
-    description:
-      "Constructed a decentralized forum with quorum moderation and content filtering.",
-    techStack: ["Go", "Docker", "PostgreSQL"],
-    badge: "Featured",
-    image: "/assets/quill.jpg",
-  },
-  {
-    title: "AI Summarizer",
-    repo: "https://github.com/User/ai-summarizer",
-    liveDemo: "https://ai-summarizer-demo.com",
-    description:
-      "An AI-powered text summarization tool built with React, Node.js, and Tailwind CSS.",
-    techStack: ["React", "Node.js", "Tailwind CSS"],
-    badge: "AI Tool",
-    image: "/assets/node.png",
-  },
-  {
     title: "Portfolio Website",
     repo: "https://github.com/User/portfolio",
     liveDemo: "https://portfolio-demo.com",
@@ -37,6 +7,41 @@ const projects = [
       "My personal portfolio website built using Next.js and Tailwind CSS.",
     techStack: ["Next.js", "Tailwind CSS"],
     badge: "Personal",
+    image: "/assets/quill.jpg",
+  },
+
+  {
+    title: "SnapPost",
+    repo: "https://github.com/YourUsername/napPost",
+    liveDemo: "https://napPost-demo.com",
+    description:
+      "A full-stack social media web application with secure authentication, dynamic post rendering, and optimized image handling using ImageKit.",
+    techStack: [
+      "Next.js",
+      "React.js",
+      "Node.js",
+      "MongoDB",
+      "ImageKit",
+      "NextAuth",
+    ],
+    badge: "Full-Stack",
+    image: "/assets/quill.jpg",
+  },
+  {
+    title: "ClarityAi Web App",
+    repo: "https://github.com/YourUsername/clarityai",
+    liveDemo: "https://clarityai-demo.com",
+    description:
+      "An AI-powered web application for text summarization as well as multilingual translation, with secure authentication and TypeScript-based maintainability.",
+    techStack: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "NextAuth",
+    ],
+    badge: "AI Tool",
     image: "/assets/quill.jpg",
   },
 ];

@@ -148,7 +148,7 @@ export default function Header({ onSectionClick }) {
 
   const sections = [
     { label: "Home", section: null },
-    { label: "Education", section: "education" },
+    // { label: "Education", section: "education" },
     { label: "Experience", section: "experience" },
     { label: "Tech Stack", section: "tech" },
     { label: "Projects", section: "projects" },
@@ -157,7 +157,7 @@ export default function Header({ onSectionClick }) {
 
   return (
     <header className="fixed top-0 w-full bg-black/65 z-50 bg-opacity-70 backdrop-blur shadow-lg">
-      <div className="max-w-7x mx-aut px-4 sm:px-6 lg:px-8 flex justify-around items-center h-16">
+      <div className="max-w-7x mx-auto px-4 sm:px-6 lg:px-8 flex  justify-between md:justify-around items-center h-16">
         <h1 className="text-2xl font-bold text-gradient ">Vivek Chauhan</h1>
 
         {/* Desktop Nav */}
@@ -175,7 +175,7 @@ export default function Header({ onSectionClick }) {
           ))}
 
           <a
-            href="/resume.pdf"
+            href="/vivek_Resume.pdf"
             download
             className="w-10 h-10 flex items-center justify-center rounded-full text-cyan-500 bg-gray-900 shadow transition"
           >
@@ -191,13 +191,6 @@ export default function Header({ onSectionClick }) {
             aria-label="Toggle menu"
           >
             <div className="absolute inset-0 flex items-center justify-center">
-              <a
-                href="/resume.pdf"
-                download
-                className="block w-full text-center bg-cyan-500 hover:bg-cyan-600 text-white py-2 rounded shadow transition flex items-center justify-center gap-2"
-              >
-                <FontAwesomeIcon icon={faFile} />
-              </a>
               {menuOpen ? (
                 <X
                   className="text-cyan-500 transition-transform duration-300 ease-in-out transform scale-110"
@@ -216,7 +209,7 @@ export default function Header({ onSectionClick }) {
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <div className="md:hidden bg-opacity-95 backdrop-blur p-4 space-y-4 shadow-md animate-fade-in-down">
+        <div className="md:hidden  bg-opacity-95 backdrop-blur p-4 space-y-4 shadow-md animate-fade-in-down">
           {sections.map(({ label, section }) => (
             <button
               key={label}
