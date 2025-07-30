@@ -112,7 +112,7 @@ const ProjectsSection = () => {
   // const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
-    <div className="py-12 px-6 max-w-5xl mx-auto">
+    <div className="py-12 md:px-6 md:max-w-5xl w-full mx-auto">
       <h2 className="text-3xl font-bold text-center mb-6 text-white">
         Projects
       </h2>
@@ -124,10 +124,10 @@ const ProjectsSection = () => {
         {projects.map((project, idx) => (
           <div
             key={idx}
-            className="flex flex-col lg:flex-row items-start justify-between bg-white/5 border border-gray-700 rounded-xl p-6 gap-6 shadow-lg"
+            className="flex flex-col lg:flex-row items-start justify-between bg-white/5 border border-gray-700 rounded-xl md:p-6  p-4 gap-6 shadow-lg"
           >
             {/* Left Content */}
-            <div className="flex-1">
+            <div className="flex-1 md:order-1 order-2">
               <h3 className="text-2xl font-semibold text-white mb-2">
                 {project.title}
               </h3>
@@ -167,7 +167,7 @@ const ProjectsSection = () => {
             </div>
 
             {/* Right Image */}
-            <div className="w-full lg:w-2/5 aspect-video relative rounded-xl overflow-hidden border border-gray-600">
+            <div className="w-full md:order-2 order-1 lg:w-2/5 aspect-video relative rounded-xl overflow-hidden border border-gray-600">
               <Image
                 src={project.image}
                 alt={project.title}

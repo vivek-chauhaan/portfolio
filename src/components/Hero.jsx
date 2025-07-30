@@ -25,10 +25,12 @@ const Hero = ({ activeSection, children, onSectionClick }) => {
             </p>
 
             {/* Gradient Name */}
-            <h1 className="text-5xl text-gradient font-bold">Vivek Chauhan</h1>
+            <h1 className="md:text-5xl text-3xl text-gradient font-bold">
+              Vivek Chauhan
+            </h1>
 
             {/* Tagline */}
-            <p className="text-xl md:text-3xl text-gray-400 font-bold">
+            <p className="text-xl md:text-2xl text-gray-400 font-semibold">
               Building the Future with Dev and AI
             </p>
           </div>
@@ -42,7 +44,7 @@ const Hero = ({ activeSection, children, onSectionClick }) => {
               </div>
 
               {/* About Box */}
-              <div className="border border-gray-700 rounded-xl p-8 max-w-2xl w-full text-center z-10 backdrop-blur-sm bg-gray-800/30">
+              <div className="border border-gray-700 rounded-xl md:p-8  p-4 md:max-w-2xl w-full text-center z-10 backdrop-blur-sm bg-gray-800/30">
                 <div className="flex items-center justify-center mb-4">
                   <span className="w-2 h-2 rounded-full bg-cyan-400 mr-2 shadow-[0_0_10px_#22d3ee] animate-pulse"></span>
                   <h2 className="text-cyan-400 text-lg font-medium">

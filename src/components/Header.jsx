@@ -199,7 +199,7 @@ export default function Header({ onSectionClick }) {
               ) : (
                 <Menu
                   className="text-cyan-500 transition-transform duration-300 ease-in-out transform group-hover:scale-125"
-                  size={30}
+                  size={25}
                 />
               )}
             </div>
@@ -209,7 +209,7 @@ export default function Header({ onSectionClick }) {
 
       {/* Mobile Nav */}
       {menuOpen && (
-        <div className="md:hidden  bg-opacity-95 backdrop-blur p-4 space-y-4 shadow-md animate-fade-in-down">
+        <div className="md:hidden   h-screen bg-opacity-95 backdrop-blur p-4 space-y-4 shadow-md animate-fade-in-down">
           {sections.map(({ label, section }) => (
             <button
               key={label}

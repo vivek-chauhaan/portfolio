@@ -6,7 +6,7 @@ const Education = () => {
   return (
     <>
       <div className="py-1 px- max-w-5xl mx-auto">
-        <h2 className="text-4xl font-bold text-center text-white mb-4">
+        <h2 className="md:text-4xl text-3xl font-semibold text-center text-white mb-4">
           Education
         </h2>
         <p className="text-center text-gray-400 mb-10">

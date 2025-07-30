@@ -85,7 +85,7 @@ const Contact = () => {
   return (
     <>
       <Toaster position="top-center" />
-      <section className="py-12 px-6 max-w-5xl mx-auto">
+      <section className="py-12 md:px-6 max-w-5xl mx-auto">
         <h2 className="text-4xl font-bold text-center text-white mb-4">
           Get In Touch
         </h2>
