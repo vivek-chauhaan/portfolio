@@ -7,7 +7,7 @@ const TechStack = () => {
   const [activeTab, setActiveTab] = useState("all");
 
   return (
-    <section className="py-12 md:px-6 max-w-4xl mx-auto text-center">
+    <div className="py-12 md:px-6 max-w-4xl mx-auto text-center">
       {/* Header */}
       <div className="flex items-center justify-center mb-5">
         <div className="relative inline-flex items-center gap-3 px-4 py-2">
@@ -63,7 +63,7 @@ const TechStack = () => {
           </div>
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

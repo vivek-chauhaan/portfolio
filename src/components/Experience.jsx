@@ -318,8 +318,8 @@ const experiences = [
 
 const ExperienceTimeline = () => {
   return (
-    <section className="relative max-w-6xl  py-16 items-center  text-white">
-      <h2 className="md:text-4xl text-3xl font-semibold text-center mb-4">
+    <div className="relative max-w-6xl  py-16 items-center  text-white">
+      <h2 className="md:text-4xl text-2xl font-semibold text-center mb-4">
         Professional Experience
       </h2>
       <p className="text-center mb-10 text-gray-400">
@@ -330,13 +330,13 @@ const ExperienceTimeline = () => {
         {/* Vertical Line (Hidden on Mobile) */}
         <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cyan-500 via-green-500 to-pink-500"></div>
 
-        <div className="space-y-5">
+        <div className="space-y-10">
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className={`relative flex ${
-                exp.side === "left" ? "justify-start" : "justify-end"
-              } md:flex`}
+              className={`relative flex flex-col md:flex-row ${
+                exp.side === "left" ? "md:justify-start" : "md:justify-end"
+              } items-center md:items-stretch`}
             >
               {/* Dot (Hidden on Mobile) */}
               <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2">
@@ -345,31 +345,32 @@ const ExperienceTimeline = () => {
 
               {/* Card */}
               <div
-                className={`w-full max-w-md p-6 rounded-lg bg-gray-900 shadow-lg ${
+                className={`w-full md:max-w-md p-6 rounded-lg bg-gray-900 shadow-lg mx-4 md:mx-0 ${
                   exp.side === "left"
-                    ? "ml-12 md:text-left text-center"
-                    : "mr-12 md:text-left text-center"
-                } mx-auto `}
+                    ? "md:ml-12 text-center md:text-left"
+                    : "md:mr-12 text-center md:text-left"
+                }`}
               >
-                <div className="flex md:justify-between items-center">
+                <div className="flex flex-col md:flex-row md:justify-between items-center gap-2 md:gap-0">
                   <h3 className="text-cyan-400 font-semibold text-base md:text-[20px]">
                     {exp.role}
                   </h3>
-
-                  <div className="inline-flex items-center gap-2 border border-gray-400 rounded-full px-4 py-1 text-white text-sm">
+                  <div className="inline-flex items-center gap-2 border border-gray-400 rounded-full px-4 py-1 text-white text-sm mt-2 md:mt-0">
                     <FontAwesomeIcon icon={faCalendar} />
                     <span>{exp.date}</span>
                   </div>
                 </div>
-                <p className="mt-1 text-lg font-semibold">{exp.company}</p>
+
+                <p className="mt-2 text-lg font-semibold">{exp.company}</p>
+
                 <div className="mt-4">
                   <h4 className="text-green-400 text-sm font-semibold mb-2">
                     Key Achievements
                   </h4>
                   <ul className="list-none space-y-2">
                     {exp.achievements.map((item, i) => (
-                      <li key={i} className="flex gap-2">
-                        <span className="text-green-400 text-sm">➜</span>
+                      <li key={i} className="flex gap-2 items-start">
+                        <span className="text-green-400 text-sm mt-1">➜</span>
                         <span className="text-gray-400 text-sm">{item}</span>
                       </li>
                     ))}
@@ -380,7 +381,7 @@ const ExperienceTimeline = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
