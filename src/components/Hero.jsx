@@ -81,7 +81,7 @@ const Hero = ({ activeSection, children, onSectionClick }) => {
                 Contact Me
               </button>
 
-              <a href="/vivek_Resume.pdf" download>
+              <a href="/vivek_resume.pdf" download>
                 <button className="btn-cyan1">
                   <FontAwesomeIcon
                     icon={faFileAlt}
