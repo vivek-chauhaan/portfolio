@@ -172,7 +172,7 @@ const ProjectsSection = () => {
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover"
+                className="object-contain w-full h-full "
               />
             </div>
           </div>

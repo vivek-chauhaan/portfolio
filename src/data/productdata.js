@@ -1,19 +1,8 @@
 const projects = [
   {
-    title: "Portfolio Website",
-    repo: "https://github.com/User/portfolio",
-    liveDemo: "https://portfolio-demo.com",
-    description:
-      "My personal portfolio website built using Next.js and Tailwind CSS.",
-    techStack: ["Next.js", "Tailwind CSS"],
-    badge: "Personal",
-    image: "/assets/quill.jpg",
-  },
-
-  {
     title: "SnapPost",
-    repo: "https://github.com/YourUsername/napPost",
-    liveDemo: "https://napPost-demo.com",
+    repo: "https://github.com/vivek-chauhaan/snappost",
+    liveDemo: "https://snap-post.netlify.app/",
     description:
       "A full-stack social media web application with secure authentication, dynamic post rendering, and optimized image handling using ImageKit.",
     techStack: [
@@ -25,7 +14,7 @@ const projects = [
       "NextAuth",
     ],
     badge: "Full-Stack",
-    image: "/assets/quill.jpg",
+    image: "/assets/snappost.png",
   },
   {
     title: "ClarityAi Web App",
@@ -43,6 +32,17 @@ const projects = [
     ],
     badge: "AI Tool",
     image: "/assets/quill.jpg",
+  },
+
+  {
+    title: "Portfolio Website",
+    repo: "https://github.com/vivek-chauhaan/portfolio",
+    liveDemo: "https://portfolio-cyan-eight-7a2fv3bhlx.vercel.app/",
+    description:
+      "My personal portfolio website built using Next.js and Tailwind CSS.",
+    techStack: ["Next.js", "Tailwind CSS"],
+    badge: "Personal",
+    image: "/assets/portfolio.png",
   },
 ];
 
