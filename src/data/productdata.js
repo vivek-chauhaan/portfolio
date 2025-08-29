@@ -17,8 +17,8 @@ const projects = [
     image: "/assets/snappost.png",
   },
   {
-    title: "ClarityAi Web App",
-    repo: "https://github.com/YourUsername/clarityai",
+    title: "Clarity-Ai Web App",
+    repo: "https://github.com/vivek-chauhaan/Clarity-Ai",
     liveDemo: "https://clarityai-demo.com",
     description:
       "An AI-powered web application for text summarization as well as multilingual translation, with secure authentication and TypeScript-based maintainability.",
@@ -31,7 +31,7 @@ const projects = [
       "NextAuth",
     ],
     badge: "AI Tool",
-    image: "/assets/quill.jpg",
+    image: "/assets/clarity.png",
   },
 
   {
